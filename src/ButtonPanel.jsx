@@ -52,11 +52,11 @@ class ButtonPanel extends Component {
           </button>
         </li>
         <li
-          className='grouping'
+          className='grouping1'
           style={{display: menuSetting === 'all' && enableEditing ? 'block' : 'none'}}
         >
           <button
-            className='buttonGroup btn'
+            className='buttonGroup btn1'
             title={`Pan mode${enableKeys ? ' (Z)' : ''}`}
             for='zoom'
             id={this.props.mode === 'zoom' ? 'currentMode' : null}
@@ -65,7 +65,7 @@ class ButtonPanel extends Component {
             <i className='icon-move' />
           </button>
           <button
-            className='buttonGroup btn'
+            className='buttonGroup btn1'
             title={`Select mode${enableKeys ? ' (V)' : ''}`}
             for='brush'
             id={this.props.mode === 'brush' ? 'currentMode' : null}
@@ -74,15 +74,16 @@ class ButtonPanel extends Component {
             <i className='icon-mouse-pointer' />
           </button>
           <button
-            className='buttonGroup btn'
+            className='buttonGroup btn1'
             title={`Add reaction mode${enableKeys ? ' (N)' : ''}`}
             for='build'
+            id={this.props.mode === 'build' ? 'currentMode' : null}
             onClick={() => this.props.setMode('build')}
-            id={this.props.mode === 'build' ? 'currentMode' : null}>
+          >
             <i className='icon-wrench' />
           </button>
           <button
-            className='buttonGroup btn'
+            className='buttonGroup btn1'
             title={`Rotate mode${enableKeys ? ' (R)' : ''}`}
             for='rotate'
             id={this.props.mode === 'rotate' ? 'currentMode' : null}
@@ -91,7 +92,7 @@ class ButtonPanel extends Component {
             <i className='icon-cw' />
           </button>
           <button
-            className='buttonGroup btn'
+            className='buttonGroup btn1'
             title={`Text mode${enableKeys ? ' (T)' : ''}`}
             for='text'
             id={this.props.mode === 'text' ? 'currentMode' : null}
@@ -101,37 +102,74 @@ class ButtonPanel extends Component {
           </button>
         </li>
         <li
-          className='grouping'
+          className='grouping2'
           style={{display: this.props.mode === 'build' && menuSetting === 'all' && enableEditing ? 'block' : 'none'}}
         >
-          <button
-            className='buttonGroup btn'
-            title={`Direction arrow${enableKeys ? ' (←)' : ''}`}
-            onClick={() => this.props.buildInput.direction_arrow.left()}
-          >
-            <i className='icon-left-big' />
-          </button>
-          <button
-            className='buttonGroup btn'
-            title={`Direction arrow${enableKeys ? ' (→)' : ''}`}
-            onClick={() => this.props.buildInput.direction_arrow.right()}
-          >
-            <i className='icon-right-big' />
-          </button>
-          <button
-            className='buttonGroup btn'
-            title={`Direction arrow${enableKeys ? ' (↑)' : ''}`}
-            onClick={() => this.props.buildInput.direction_arrow.up()}
-          >
-            <i className='icon-up-big' />
-          </button>
-          <button
-            className='buttonGroup btn'
-            title={`Direction arrow${enableKeys ? ' (↓)' : ''}`}
-            onClick={() => this.props.buildInput.direction_arrow.down()}
-          >
-            <i className='icon-down-big' />
-          </button>
+          {/* <div class='column'> */}
+            <button
+              className='buttonGroup btn2'
+              title={`Direction arrow${enableKeys ? ' (↑)' : ''}`}
+              onClick={() => this.props.buildInput.direction_arrow.up()}
+            >
+              <i className='icon-up-big' />
+            </button>
+            <button
+              className='buttonGroup btn2'
+              title={`Direction arrow${enableKeys ? ' (→)' : ''}`}
+              onClick={() => this.props.buildInput.direction_arrow.right()}
+            >
+              <i className='icon-right-big' />
+            </button>
+            <button
+              className='buttonGroup btn2'
+              title={`Direction arrow${enableKeys ? ' (↓)' : ''}`}
+              onClick={() => this.props.buildInput.direction_arrow.down()}
+            >
+              <i className='icon-down-big' />
+            </button>
+            <button
+              className='buttonGroup btn2'
+              title={`Direction arrow${enableKeys ? ' (←)' : ''}`}
+              onClick={() => this.props.buildInput.direction_arrow.left()}
+            >
+              <i className='icon-left-big' />
+            </button>
+          {/* </div> */}
+        </li>
+        <li
+          className='grouping3'
+          style={{display: this.props.mode === 'build' && menuSetting === 'all' && enableEditing ? 'block' : 'none'}}
+        >
+          {/* <div class='column'> */}
+            <button
+              className='buttonGroup btn3'
+              title={`Direction arrow${enableKeys ? ' (↗)' : ''}`}
+              onClick={() => this.props.buildInput.direction_arrow.north_east()}
+            >
+              <i className='icon-north-east-big' />
+            </button>
+            <button
+              className='buttonGroup btn3'
+              title={`Direction arrow${enableKeys ? ' (↘)' : ''}`}
+              onClick={() => this.props.buildInput.direction_arrow.south_east()}
+            >
+              <i className='icon-south-east-big' />
+            </button>
+            <button
+              className='buttonGroup btn3'
+              title={`Direction arrow${enableKeys ? ' (↙)' : ''}`}
+              onClick={() => this.props.buildInput.direction_arrow.south_west()}
+            >
+              <i className='icon-south-west-big' />
+            </button>
+            <button
+              className='buttonGroup btn3'
+              title={`Direction arrow${enableKeys ? ' (↖)' : ''}`}
+              onClick={() => this.props.buildInput.direction_arrow.north_west()}
+            >
+              <i className='icon-north-west-big' />
+            </button>
+          {/* </div> */}
         </li>
       </ul>
     )

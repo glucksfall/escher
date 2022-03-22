@@ -99,6 +99,22 @@ export default class DirectionArrow {
     this.setRotation(270)
   }
 
+  south_east () {
+    this.setRotation(45)
+  }
+
+  south_west () {
+    this.setRotation(135)
+  }
+
+  north_west () {
+    this.setRotation(225)
+  }
+
+  north_east () {
+    this.setRotation(315)
+  }
+
   _setupDrag () {
     var drag = d3Drag()
         .on('start', d => {
@@ -124,4 +140,4 @@ export default class DirectionArrow {
         })
     this.arrowContainer.call(drag)
   }
-}
+} 

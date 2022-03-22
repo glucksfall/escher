@@ -1,3 +1,7 @@
+ul {
+  columns: 2;
+}
+
 .escher-container .button-panel {
   position: absolute;
   left: 4px;
@@ -45,15 +49,15 @@
   background-image: linear-gradient(#8F4F3F,#834c3c 6%,#8d3a2d) !important;
 }
 
-.escher-container .buttonGroup.btn {
+.escher-container .buttonGroup.btn1, .escher-container .buttonGroup.btn2, .escher-container .buttonGroup.btn3 {
   margin-top: -1px;
 }
 
-.escher-container .button {
+.escher-container .button.btn {
   border-radius: 4px;
 }
 
-.escher-container .button.btn, .escher-container .buttonGroup.btn {
+.escher-container .button.btn, .escher-container .buttonGroup.btn1, .escher-container .buttonGroup.btn2, .escher-container .buttonGroup.btn3 {
   padding: unset;
   color: white!important;
   border: 1px solid #474949;

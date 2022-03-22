@@ -31,7 +31,7 @@ export default class BuildInput {
     // map
     this.map = map
     // set up the reaction direction arrow
-    const defaultAngle = 90 // degrees
+    const defaultAngle = 0 // degrees
     this.direction_arrow = new DirectionArrow(map.sel)
     this.direction_arrow.setRotation(defaultAngle)
     this.setUpMapCallbacks(map)

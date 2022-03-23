@@ -105,73 +105,78 @@ class ButtonPanel extends Component {
           className='grouping2'
           style={{display: this.props.mode === 'build' && menuSetting === 'all' && enableEditing ? 'block' : 'none'}}
         >
-          {/* <div class='column'> */}
-            <button
-              className='buttonGroup btn2'
-              title={`Direction arrow${enableKeys ? ' (↑)' : ''}`}
-              onClick={() => this.props.buildInput.direction_arrow.up()}
-            >
-              <i className='icon-up-big' />
-            </button>
-            <button
-              className='buttonGroup btn2'
-              title={`Direction arrow${enableKeys ? ' (→)' : ''}`}
-              onClick={() => this.props.buildInput.direction_arrow.right()}
-            >
-              <i className='icon-right-big' />
-            </button>
-            <button
-              className='buttonGroup btn2'
-              title={`Direction arrow${enableKeys ? ' (↓)' : ''}`}
-              onClick={() => this.props.buildInput.direction_arrow.down()}
-            >
-              <i className='icon-down-big' />
-            </button>
-            <button
-              className='buttonGroup btn2'
-              title={`Direction arrow${enableKeys ? ' (←)' : ''}`}
-              onClick={() => this.props.buildInput.direction_arrow.left()}
-            >
-              <i className='icon-left-big' />
-            </button>
-          {/* </div> */}
+          <button
+            className='buttonGroup btn2'
+            title={`Direction arrow${enableKeys ? ' (↑)' : ''}`}
+            onClick={() => this.props.buildInput.direction_arrow.up()}
+          >
+            <i className='icon-up-big' />
+          </button>
+          <button
+            className='buttonGroup btn2'
+            title={`Direction arrow${enableKeys ? ' (→)' : ''}`}
+            onClick={() => this.props.buildInput.direction_arrow.right()}
+          >
+            <i className='icon-right-big' />
+          </button>
+          <button
+            className='buttonGroup btn2'
+            title={`Direction arrow${enableKeys ? ' (↓)' : ''}`}
+            onClick={() => this.props.buildInput.direction_arrow.down()}
+          >
+            <i className='icon-down-big' />
+          </button>
+          <button
+            className='buttonGroup btn2'
+            title={`Direction arrow${enableKeys ? ' (←)' : ''}`}
+            onClick={() => this.props.buildInput.direction_arrow.left()}
+          >
+            <i className='icon-left-big' />
+          </button>
         </li>
         <li
           className='grouping3'
           style={{display: this.props.mode === 'build' && menuSetting === 'all' && enableEditing ? 'block' : 'none'}}
         >
-          {/* <div class='column'> */}
-            <button
-              className='buttonGroup btn3'
-              title={`Direction arrow${enableKeys ? ' (↗)' : ''}`}
-              onClick={() => this.props.buildInput.direction_arrow.north_east()}
-            >
-              <p class="gly-rotate-45"><i className='icon-north-east-big' /></p>
-            </button>
-            <button
-              className='buttonGroup btn3'
-              title={`Direction arrow${enableKeys ? ' (↘)' : ''}`}
-              onClick={() => this.props.buildInput.direction_arrow.south_east()}
-            >
-              <p class="gly-rotate-45"><i className='icon-south-east-big' /></p>
-            </button>
-            <button
-              className='buttonGroup btn3'
-              title={`Direction arrow${enableKeys ? ' (↙)' : ''}`}
-              onClick={() => this.props.buildInput.direction_arrow.south_west()}
-            >
-              <p class="gly-rotate-45"><i className='icon-south-west-big' /></p>
-            </button>
-            <button
-              className='buttonGroup btn3'
-              title={`Direction arrow${enableKeys ? ' (↖)' : ''}`}
-              onClick={() => this.props.buildInput.direction_arrow.north_west()}
-            >
-              <p class="gly-rotate-45"><i className='icon-north-west-big' /></p>
-            </button>
-          {/* </div> */}
-          <button>
-            <input type='number' placeholder='Angle'/>
+          <button
+            className='buttonGroup btn3'
+            title={`Direction arrow${enableKeys ? ' (↗)' : ''}`}
+            onClick={() => this.props.buildInput.direction_arrow.north_east()}
+          >
+            <p class="gly-rotate-45"><i className='icon-north-east-big' /></p>
+          </button>
+          <button
+            className='buttonGroup btn3'
+            title={`Direction arrow${enableKeys ? ' (↘)' : ''}`}
+            onClick={() => this.props.buildInput.direction_arrow.south_east()}
+          >
+            <p class="gly-rotate-45"><i className='icon-south-east-big' /></p>
+          </button>
+          <button
+            className='buttonGroup btn3'
+            title={`Direction arrow${enableKeys ? ' (↙)' : ''}`}
+            onClick={() => this.props.buildInput.direction_arrow.south_west()}
+          >
+            <p class="gly-rotate-45"><i className='icon-south-west-big' /></p>
+          </button>
+          <button
+            className='buttonGroup btn3'
+            title={`Direction arrow${enableKeys ? ' (↖)' : ''}`}
+            onClick={() => this.props.buildInput.direction_arrow.north_west()}
+          >
+            <p class="gly-rotate-45"><i className='icon-north-west-big' /></p>
+          </button>
+        </li>
+        <li
+          className='grouping4'
+          style={{display: this.props.mode === 'build' && menuSetting === 'all' && enableEditing ? 'block' : 'none'}}
+        >
+          <input type='text' name='angleVal' id='angle' min='0' max='360' onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.key === "Backspace"' />
+          <button
+            className='buttonGroup btn4'
+            title={`Direction arrow${enableKeys ? ' (∠)' : ''}`}
+            onChange={(angle) => this.props.buildInput.direction_arrow.direction_from_user(parseFloat(angle))}
+          >
           </button>
         </li>
       </ul>

@@ -115,6 +115,10 @@ export default class DirectionArrow {
     this.setRotation(315)
   }
 
+  direction_from_user (angleVal) {
+    this.setRotation(parseFloat(angleVal))
+  }
+
   _setupDrag () {
     var drag = d3Drag()
         .on('start', d => {

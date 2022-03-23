@@ -84,3 +84,12 @@ ul {
 .escher-container .button-panel [class^='icon-'] {
   font-size: 23px;
 }
+
+.gly-rotate-45 {
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

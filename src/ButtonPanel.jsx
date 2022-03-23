@@ -146,30 +146,33 @@ class ButtonPanel extends Component {
               title={`Direction arrow${enableKeys ? ' (↗)' : ''}`}
               onClick={() => this.props.buildInput.direction_arrow.north_east()}
             >
-              <i className='icon-north-east-big' />
+              <p class="gly-rotate-45"><i className='icon-north-east-big' /></p>
             </button>
             <button
               className='buttonGroup btn3'
               title={`Direction arrow${enableKeys ? ' (↘)' : ''}`}
               onClick={() => this.props.buildInput.direction_arrow.south_east()}
             >
-              <i className='icon-south-east-big' />
+              <p class="gly-rotate-45"><i className='icon-south-east-big' /></p>
             </button>
             <button
               className='buttonGroup btn3'
               title={`Direction arrow${enableKeys ? ' (↙)' : ''}`}
               onClick={() => this.props.buildInput.direction_arrow.south_west()}
             >
-              <i className='icon-south-west-big' />
+              <p class="gly-rotate-45"><i className='icon-south-west-big' /></p>
             </button>
             <button
               className='buttonGroup btn3'
               title={`Direction arrow${enableKeys ? ' (↖)' : ''}`}
               onClick={() => this.props.buildInput.direction_arrow.north_west()}
             >
-              <i className='icon-north-west-big' />
+              <p class="gly-rotate-45"><i className='icon-north-west-big' /></p>
             </button>
           {/* </div> */}
+          <button>
+            <input type='number' placeholder='Angle'/>
+          </button>
         </li>
       </ul>
     )

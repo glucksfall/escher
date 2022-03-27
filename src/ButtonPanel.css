@@ -1,7 +1,3 @@
-ul {
-  columns: 2;
-}
-
 .escher-container .button-panel {
   position: absolute;
   left: 4px;
@@ -9,6 +5,7 @@ ul {
   margin-top: -32px;
   padding-left: 0;
   touch-action: none;
+  columns: 2;
 }
 
 .escher-container .button-panel>li {
@@ -49,10 +46,7 @@ ul {
   background-image: linear-gradient(#8F4F3F,#834c3c 6%,#8d3a2d) !important;
 }
 
-.escher-container .buttonGroup.btn1, .escher-container .buttonGroup.btn2, .escher-container .buttonGroup.btn3 {
-  margin-top: -1px;
-}
-
+.escher-container .buttonGroup.btn1, .escher-container .buttonGroup.btn2, .escher-container .buttonGroup.btn3
 .escher-container .button.btn {
   border-radius: 4px;
 }
@@ -64,7 +58,7 @@ ul {
   background-image: linear-gradient(#4F5151, #474949 6%, #3F4141);
   background-color: white;
   text-align: center;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   cursor: pointer;
   font-size: 14px!important;
   font-weight: 400;
@@ -85,6 +79,10 @@ ul {
   font-size: 23px;
 }
 
+.escher-container .grouping4 {
+  width: 40px;
+}
+
 .gly-rotate-45 {
   filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
   -webkit-transform: rotate(45deg);
@@ -92,4 +90,16 @@ ul {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

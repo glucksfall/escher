@@ -171,13 +171,8 @@ class ButtonPanel extends Component {
           className='grouping4'
           style={{display: this.props.mode === 'build' && menuSetting === 'all' && enableEditing ? 'block' : 'none'}}
         >
-          <input type='text' name='angleVal' id='angle' min='0' max='360' onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.key === "Backspace"' />
-          <button
-            className='buttonGroup btn4'
-            title={`Direction arrow${enableKeys ? ' (∠)' : ''}`}
-            onChange={(angle) => this.props.buildInput.direction_arrow.direction_from_user(parseFloat(angle))}
-          >
-          </button>
+          <input type='number' name='angleVal' id='angle' min='0' max='360' style='width: 40px'
+          onChange={() => this.props.buildInput.direction_arrow.direction_from_user(document.getElementById('angle').value)}/>
         </li>
       </ul>
     )

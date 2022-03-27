@@ -115,8 +115,12 @@ export default class DirectionArrow {
     this.setRotation(315)
   }
 
-  direction_from_user (angleVal) {
-    this.setRotation(parseFloat(angleVal))
+  direction_from_user (angle) {
+    if (angle === undefined) this.angle = 0
+    else if (isNaN(angle)) this.angle = 0
+    else this.angle = angle
+    // console.log(this.angle)
+    this.setRotation(parseFloat(this.angle))
   }
 
   _setupDrag () {

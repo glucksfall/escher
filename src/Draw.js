@@ -339,7 +339,7 @@ function update_segment (update_selection, scale, cobra_model,
     var arrow_height = ((reversibility || coefficient > 0) ?
                         arrow_size.height : 0)
     var r = node_is_primary ? primary_r : secondary_r
-    return r + arrow_height + 10
+    return r + arrow_height + 11
   }
 
   // update arrows

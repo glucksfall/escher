@@ -171,7 +171,7 @@ class ButtonPanel extends Component {
           className='grouping4'
           style={{display: this.props.mode === 'build' && menuSetting === 'all' && enableEditing ? 'block' : 'none'}}
         >
-          <input type='number' name='angleVal' id='angle' min='0' max='360' style='width: 40px'
+          <input type='number' name='angleVal' id='angle' min='-360' max='360' style='width: 40px'
           onChange={() => this.props.buildInput.direction_arrow.direction_from_user(document.getElementById('angle').value)}/>
         </li>
       </ul>

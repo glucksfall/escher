@@ -120,7 +120,7 @@ export default class DirectionArrow {
     else if (isNaN(angle)) this.angle = 0
     else this.angle = angle
     // console.log(this.angle)
-    this.setRotation(parseFloat(this.angle))
+    this.setRotation(360-parseFloat(this.angle))
   }
 
   _setupDrag () {
@@ -148,4 +148,4 @@ export default class DirectionArrow {
         })
     this.arrowContainer.call(drag)
   }
-} 
+}
